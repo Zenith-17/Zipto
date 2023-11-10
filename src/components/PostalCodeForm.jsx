@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -35,6 +34,7 @@ const PostalCodeForm = () => {
       setLoading(false);
     }
   };
+
   const handleClear = () => {
     dispatch(clearLocation());
     setPostalCode('');
@@ -67,7 +67,7 @@ const PostalCodeForm = () => {
           </button>
         </div>
       </div>
-      {error && <p className="text-danger mt-2">{error}</p>}
+      {error && <p className="text-danger mt-2 fs-5">{error}</p>}
     </form>
   );
 };
