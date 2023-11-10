@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
+import PlaceList from './PlaceList';
 
 const LocationInfo = () => {
   const location = useSelector((state) => state.app.location);
@@ -14,22 +15,7 @@ const LocationInfo = () => {
             <p className="card-text"><strong>Country:</strong> {location.country}</p>
             <p className="card-text"><strong>State:</strong> {location.state}</p>
             {location.places && location.places.length > 0 ? (
-              <div>
-                <h3>Places:</h3>
-                <div className="row">
-                  {location.places.map((place, index) => (
-                    <div key={index} className={`col-md-${12 / location.places.length} mb-3`}>
-                      <div className="card">
-                        <div className="card-body">
-                          <h5 className="card-title">{place['place name']}</h5>
-                          <p className="card-text"><strong>Longitude:</strong> {place.longitude}</p>
-                          <p className="card-text"><strong>Latitude:</strong> {place.latitude}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <PlaceList places={location.places} />
             ) : (
               <p>No places found.</p>
             )}
