@@ -9,7 +9,7 @@ A React application that allows users to enter a postal code and fetch informati
 - **Error Handling:** Gracefully handles API call failures and displays an error message.
 - **Loading Indicator:** Provides a loading indicator to show when data is being fetched.
 - **Clear Information:** Includes a button to clear the displayed information.
-- **Styling:** Styled using CSS to enhance visual appeal.
+- **Styling:** Styled using bootstrap to enhance visual appeal.
 
 ## Components
 
