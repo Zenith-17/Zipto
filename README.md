@@ -1,4 +1,4 @@
-# Zip Code Information App
+# Zipto
 
 A React application that allows users to enter a postal code and fetch information about that location using the [Zippopotam API](https://api.zippopotam.us/).
 
